@@ -1,0 +1,36 @@
+import java.util.*;
+import java.lang.Math;
+public class Main {
+    public static void main(String args[]) {
+          Scanner scn = new Scanner(System.in);
+          long N = scn.nextLong();
+          long answer = 0;
+          long final1 = N;      //answer + N 
+          long power = -1;
+          if (N == 0)
+          {
+              final1 = 5;
+              System.out.println(final1);
+              return;
+          }
+          while ( N!= 0 )
+          {
+              power ++;
+              if( N%10 == 0)
+              {
+                answer = answer + (long) (Math.pow(10,power) * 5); 
+              }
+              N = N/10; 
+
+          }
+          final1 = final1 + answer;
+          System.out.println(final1);
+
+
+
+
+
+
+
+    }
+}
